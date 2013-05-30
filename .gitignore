@@ -107,28 +107,3 @@ skin/install/
 var/
 phpmyadmin/
 phpmyadmin.deactivated/
-
-
-# Wordpress Media Files #
-#########################
-wp/wp-content/blogs.dir
-wp/wp-content/uploads
-wp/wp-content/*uploads/*
- 
-# W3 Total Cache files #
-########################
-wp/wp-content/w3-total-cache*
-wp/wp-content/w3tc-*/**/**
-wp/wp-content/db.php
-wp/wp-content/advanced-cache.php
-wp/wp-content/object-cache.php
- 
-# WordPress stuff #
-###################
-wp/*.htaccess
-wp/sitemap.xml
-wp/sitemap.xml.gz
-wp/readme.html
-wp/license.txt
-wp/*.log
-wp/local-config.php
