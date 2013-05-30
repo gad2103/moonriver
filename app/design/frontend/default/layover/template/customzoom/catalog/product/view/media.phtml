@@ -1,0 +1,113 @@
+<?php
+	$_prdt = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+    $galleryImages = $_prdt->getMediaGalleryImages();
+   
+    $config = Mage::helper("CustomZoom")->confGetter();
+?>
+ 
+
+<?php if ($_prdt->getImage() != 'no_selection' && $_prdt->getImage()): ?>
+	<div id="image">
+        <?php $firtsImage = Mage::helper("CustomZoom")->variImgAli($_prdt); ?>
+        <a href='<?php echo $firtsImage->getUrl()?>' class='custom-zoom' id='zoom' rel="<?php echo $config['conf'] ?>">
+            <img src="<?php echo Mage::helper("CustomZoom")->imgFarivar($_prdt, $firtsImage, $config['fixSize'], $config['imgSize'])?>" alt='<?php echo $this->htmlEscape($_prdt->getName()) ?>' style="<?php echo $config['fixSize'].":".$config['imgSize'] ?>px" title="" />
+        </a>
+    </div>
+<?php else: ?>
+	<p class="product-image">
+		<?php
+			$_img = '<img src="'.$this->helper('catalog/image')->init($_prdt, 'image')->resize(265).'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
+			echo $_helper->productAttribute($_prdt, $_img, 'image');
+		?>
+	</p>
+<?php endif; ?>
+
+<?php if (count($galleryImages) > 0): ?>
+
+<?php
+	 //For thumnail image 
+	 
+	$thumb_width	= intval(Mage::getStoreConfig('customadmin/images/product_thumbnail_width', Mage::app()->getStore()->getId()));
+	$thumb_height	= intval(Mage::getStoreConfig('customadmin/images/product_thumbnail_height', Mage::app()->getStore()->getId()));
+	
+	if($thumb_height)
+	{
+		$thumb_height_fix = $thumb_height;
+	}
+	else
+	{
+			$thumb_height_fix = 60;
+	}
+    if ($thumb_width)
+	{
+			$thumb_width_fix = $thumb_width;
+	}
+	else
+     {		
+	 		$thumb_width_fix = 60;
+	 }
+
+?>
+
+
+<div class="more-views" id="zoom-gallery" style="display:<?php echo count($galleryImages)>1?"block":"none"?>">
+	<h4><?php echo $this->__('More Views') ?></h4>
+    <ul>
+    <?php foreach ($galleryImages as $_img): ?>
+        <li>
+        <?php $_smallImg = Mage::helper("CustomZoom")->imgFarivar($_prdt, $_img, $config['fixSize'], $config['imgSize']); ?>
+        <a href="<?php echo $_img->url; ?>" class="custom-zoom-gallery" rel="useZoom: 'zoom', smallImage: '<?php echo $_smallImg ?>'">
+        	<img src="<?php echo $this->helper('catalog/image')->init($_prdt, 'thumbnail', $_img->getFile())->resize($thumb_width_fix,$thumb_height_fix); ?>" alt="<?php echo $this->htmlEscape($_img->getLabel()) ?>" title="<?php echo $this->htmlEscape($_img->getLabel()) ?>" />
+		</a>
+        </li>
+    <?php endforeach; ?>
+    </ul>
+</div>
+<?php endif; ?>
+
+<?php if($_prdt->getTypeId() == "configurable"): ?>
+    <?php $_attrId = Mage::helper("CustomZoom")->getAttributeId() ?>
+    <script type="text/javascript">
+        jq("document").ready(function(){
+            jq("#attribute<? echo $_attrId?>").change(function(){
+                var options = spConfig.getAttributeOptions(<? echo $_attrId?>);
+                for (x in options) {
+                    if (options[x].id == jq(this).val()) {
+                        jq.post("<?php echo $this->getUrl("CustomZoom/ajax/images")?>",
+                            { products:options[x].products },
+                            function(data){
+                                fillMediaImages(data);
+                            }, "json");
+                    }
+                }
+            });
+        });
+
+        function fillMediaImages(data) {
+            jq("#zoom").data("zoom").destroy();
+            jq("#zoom-gallery ul").empty();
+            for (x in data) {
+                if (data[x].big) {
+                jq("#zoom-gallery ul").append(
+                    jq("<li>").append(
+                        jq("<a>")
+                            .attr("href",data[x].big)
+                            .addClass("custom-zoom-gallery")
+                            .attr("rel","useZoom: 'zoom', smallImage: '"+data[x].small+"'")
+                            .append(
+                                jq("<img>").attr("src",data[x].thumb)
+                                        .attr("alt",data[x].title)
+                                        .attr("title",data[x].title)
+                            )
+                        )
+                    )
+                }
+            }
+            jq("#zoom, .custom-zoom-gallery").CustomZoom();
+            jq("#wrap").css("z-index","110");
+        }
+    </script>
+<?php endif; ?>   
+
+ 

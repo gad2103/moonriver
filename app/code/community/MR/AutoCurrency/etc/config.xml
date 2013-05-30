@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MR_AutoCurrency>
+            <version>0.1.6</version>
+        </MR_AutoCurrency>
+    </modules>
+    <global>
+        <models>            
+			<core>
+				<rewrite>
+					<store>MR_AutoCurrency_Model_Store</store>
+				</rewrite>
+			</core>
+        </models>        
+        <helpers>
+            <autocurrency>
+                <class>MR_AutoCurrency_Helper</class>
+            </autocurrency>
+        </helpers>		
+    </global>
+</config>

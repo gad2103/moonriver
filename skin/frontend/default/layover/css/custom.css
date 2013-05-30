@@ -1,0 +1,263 @@
+@media only screen and (min-width: 768px) {
+    .flexslider { width: 66.7%;}
+    #main .img-gallery .img-list {
+        padding: 10px 0 0 4px !important;
+    }
+    #main .img-gallery {
+        margin: 0 0 30px !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .flexslider {width: 96% !important;}
+    .message {width:93% !important;}
+    .block-recent-posts {width:93% !important;}
+    #newsletter-wrap {float:left !important; width: 93% !important;}
+    #main > .std > .img-gallery > .img-list > li {
+    width: 93% !important;
+    /*Wordpress*/
+    /* Floated content doesn't work well at this size */
+    .alignleft,
+    .alignright {
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+    #main > .std > .img-gallery > .img-list > li > a > img {
+        width: 300px;
+        height:auto;
+        margin-bottom: 60px;
+    }
+    #main > .std > .img-gallery > .img-list > li > .homepage-gallery-l1 {
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    #main > .std > .img-gallery > .img-list > li > .homepage-gallery-l1 > .homepage-gallery-l2 {
+        width: 240px !important;
+        height: 250px !important;
+        background-size: 300px 300px !important;
+    }
+}
+
+.flexslider {
+    float: left; 
+    margin: 0 0 30px !important;	
+}
+.quickview {
+    display: none !important;
+}
+#main {
+    padding-bottom: 20px !important;
+}
+#main .img-gallery .img-list .img-overlay .add-to-cart {
+    float: left !important;
+}
+
+#main > .std > .img-gallery > .img-list > li {
+    width: 460px;
+}
+#main > .std > .img-gallery > .img-list > li > .homepage-gallery-l1 {
+    width: 440px;
+    height: 440px;
+}
+
+#main > .std > .img-gallery > .img-list > li > .homepage-gallery-l1 > .homepage-gallery-l2 {
+    width: 380px;
+    height: 390px;
+    background-size: 440px;
+}
+#main > .std > .img-gallery > .img-list > li > .homepage-gallery-l1 > .homepage-gallery-l2 > .overlay-txt > p {
+    font-size:15px !important;
+    font-style: italic !important;
+    font-family: Georgia, Times, serif !important;
+}
+.block-currency {
+    display: none;
+}
+#header .logo {
+    width: 205px !important;
+    height: 110px !important;
+    background-position: 27px 10px !important;
+    display: block;
+    float: none !important;
+    margin: 1px !important;
+    /*box-shadow: 0 0 9px #aaa;
+    border: 2px dotted #d7d7d7;*/
+}
+
+#header .logo-holder, #footer {
+    background: url('../images/bg-pattern.png');
+}
+.menu-bar {
+    margin-bottom: 0 !important;
+}
+p.no-rating {
+    display: none !important;
+}
+#nav > li > a {
+    padding: 14px 14px !important;
+}
+.message p {
+    font-size: 113% !important;
+}
+.join-form {
+    float: none !important;
+    width: auto !important;
+    padding: 0 !important;
+}
+.join-form > fieldset {
+    background: #fff;
+    overflow: hidden;
+}
+.join-form .row-text input {
+    display: block;
+    margin: 0 auto !important;
+    float: none !important;
+}
+.join-form .row input[type="submit"] {
+    margin-top: 39px;
+}
+.two-columns {
+    padding-bottom: 20px !important;
+}
+#footer .f-columns .f-column {
+    margin: 0 0 0 10px !important;
+}
+/* Recent Posts Block */
+.block-recent-posts {
+    float:left;
+    width: 50%;
+    background: url(../images/bg-message.gif);
+    padding: 10px;
+}
+.block-recent-posts > .block-title {
+    background: #fff !important;
+}
+.block-recent-posts .block-title strong span {
+    color: #333 !important;
+    letter-spacing: 2px;
+    font: 18px 'LatoRegular', Arial, Helvetica, sans-serif !important;
+}
+p.post-date {
+    font-size: 10px !important;
+}
+.block-content ul li a {
+    letter-spacing: 1px;
+    font-style: italic;
+}
+#newsletter-wrap {
+    float:right;
+    width: 45%;
+    background: url(../images/bg-message.gif);
+    padding: 10px;
+}
+/* Wordpress Post Native class addback */
+.post-entry {
+    max-width: 578px;
+}
+
+.post-entry img {
+    border: 1px solid #ddd;
+    padding: 6px;
+}
+.post-entry > * {
+    line-height: 1.625em;
+    font-size: 15px;
+}
+.post-meta {
+    clear: both;
+    margin-top: 60px;
+}
+img.alignleft,
+img.alignright,
+img.aligncenter {
+    margin-bottom: 1.625em;
+}
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.625em;
+}
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.625em;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.entry-content img,
+.comment-content img,
+.widget img {
+    max-width: 97.5%; /* Fluid images for posts, comments, and widgets */
+}
+img[class*="align"],
+img[class*="wp-image-"] {
+    height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+img.size-full {
+    max-width: 97.5%;
+}
+/* Mailchimp */
+#mc_embed_signup{position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,.8);display:none;z-index:10000; }
+#mc_embed_signup form{    background-color: #FFFFFF;
+border: 3px solid #3494c7;
+border-radius: 4px 4px 4px 4px;
+color: #000000;
+font: 14px Helvetica,Arial,sans-serif;
+left: 63%;
+margin-left: -25%;
+padding: 20px;
+position: fixed;
+text-align: left;
+top: 25%;
+width: 25%;}
+#mc_embed_signup a.mc_embed_close{background:transparent url(http://downloads.mailchimp.com/img/closebox.png) no-repeat; display:block; height:30px; width:30px; text-indent:-999em; position:absolute; top:-10px; right:-10px; display:none; }
+/* MailChimp Form Embed Code - Classic - 08/17/2011 */
+#mc_embed_signup h2 {font-weight:bold; padding:0; margin:15px 0; font-size:1.4em;}
+#mc_embed_signup input {border:1px solid #999; -webkit-appearance:none;}
+#mc_embed_signup input[type=checkbox]{-webkit-appearance:checkbox;}
+#mc_embed_signup input[type=radio]{-webkit-appearance:radio;}
+#mc_embed_signup input:focus {border-color:#333;}
+#mc_embed_signup .button {clear:both; background-color: #aaa; border: 0 none; border-radius:4px; color: #FFFFFF; cursor: pointer; display: inline-block; font-size:15px; font-weight: bold; height: 32px; line-height: 32px; margin: 0 5px 10px 0; padding: 0 22px; text-align: center; text-decoration: none; vertical-align: top; white-space: nowrap; width: auto;}
+#mc_embed_signup .button:hover {background-color:#777;}
+#mc_embed_signup .small-meta {font-size: 11px;}
+#mc_embed_signup .nowrap {white-space:nowrap;}
+
+#mc_embed_signup .mc-field-group {clear:left; position:relative; width:96%; padding-bottom:3%; min-height:50px;}
+#mc_embed_signup .size1of2 {clear:none; float:left; display:inline-block; width:46%; margin-right:4%;}
+* html #mc_embed_signup .size1of2 {margin-right:2%; /* Fix for IE6 double margins. */}
+#mc_embed_signup .mc-field-group label {display:block; margin-bottom:3px;}
+#mc_embed_signup .mc-field-group input {display:block; width:100%; padding:8px 0; text-indent:2%;}
+#mc_embed_signup .mc-field-group select {display:inline-block; width:99%; padding:5px 0; margin-bottom:2px;}
+
+#mc_embed_signup .datefield, #mc_embed_signup .phonefield-us{padding:5px 0;}
+#mc_embed_signup .datefield input, #mc_embed_signup .phonefield-us input{display:inline; width:60px; margin:0 2px; letter-spacing:1px; text-align:center; padding:5px 0 2px 0;}
+#mc_embed_signup .phonefield-us .phonearea input, #mc_embed_signup .phonefield-us .phonedetail1 input{width:40px;}
+#mc_embed_signup .datefield .monthfield input, #mc_embed_signup .datefield .dayfield input{width:30px;}
+#mc_embed_signup .datefield label, #mc_embed_signup .phonefield-us label{display:none;}
+
+#mc_embed_signup .indicates-required {text-align:right; font-size:11px; margin-right:4%;}
+#mc_embed_signup .asterisk {color:#c60; font-size:200%;}
+#mc_embed_signup .mc-field-group .asterisk {position:absolute; top:25px; right:10px;}        
+#mc_embed_signup .clear {clear:both;}
+
+#mc_embed_signup .mc-field-group.input-group ul {margin:0; padding:5px 0; list-style:none;}
+#mc_embed_signup .mc-field-group.input-group ul li {display:block; padding:3px 0; margin:0;}
+#mc_embed_signup .mc-field-group.input-group label {display:inline;}
+#mc_embed_signup .mc-field-group.input-group input {display:inline; width:auto; border:none;}
+
+#mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; width:90%;margin: 0 5%; clear: both;}
+#mc_embed_signup div.response {margin:1em 0; padding:1em .5em .5em 0; font-weight:bold; float:left; top:-1.5em; z-index:1; width:80%;}
+#mc_embed_signup #mce-error-response {display:none;}
+#mc_embed_signup #mce-success-response {color:#529214; display:none;}
+#mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0;}
+
+#mc-embedded-subscribe {clear:both; width:auto; display:block; margin:1em 0 1em 5%;}
+#mc_embed_signup #num-subscribers {font-size:1.1em;}
+#mc_embed_signup #num-subscribers span {padding:.5em; border:1px solid #ccc; margin-right:.5em; font-weight:bold;}

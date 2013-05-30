@@ -1,0 +1,38 @@
+
+.custom-zoom-lens {
+	
+	background-color:#09F;	
+	cursor:pointer;		
+	border: 1px dotted  #F00;
+	margin:-4px;	
+}
+
+
+.custom-zoom-title {
+	padding:5px;
+	width:100%;
+	text-align:center;	
+	font-weight:bold;
+	font-size:13px;
+	font-family:Arial;
+	position:absolute !important;
+	background-color:#000;
+	color:#fff;
+	
+	top:0px;
+}
+
+
+.custom-zoom-big {
+	border:2px dashed #09F;
+	overflow:hidden;
+}
+
+.custom-zoom-loading {
+	color:white;	
+	background:#222;
+	padding:3px;
+	border:1px #000;
+}
+
+
