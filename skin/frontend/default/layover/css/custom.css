@@ -23,7 +23,7 @@
         margin-left: 0;
         margin-right: 0;
     }
-}
+    }
     #main > .std > .img-gallery > .img-list > li > a > img {
         width: 300px;
         height:auto;
@@ -38,6 +38,18 @@
         width: 240px !important;
         height: 250px !important;
         background-size: 300px 300px !important;
+    }
+    div.big-column2 > div.ttl-area2 {
+        display: block !important;
+    }
+    div.big-column2 > div.ttl-area2 > form.filters-form {
+        float: none !important;
+    }
+    form.filters-form > fieldset > div.cell {
+        width: 100%;
+    }
+    form.filters-form > fieldset > div.cell > select {
+        width: 100% !important;
     }
 }
 
