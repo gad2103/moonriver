@@ -137,6 +137,20 @@ p.no-rating {
 #footer .f-columns .f-column {
     margin: 0 0 0 10px !important;
 }
+
+div.category-description > p:first-child > span:first-child {
+    font-family: 'Italianno', cursive !important;
+    font-size: 31px !important;
+    color: #333 !important;
+    line-height: 1.26em !important;
+    text-shadow: 1px 1px #d3d3d3;
+}
+div.category-description > p:first-child + p > span {
+    font-style: italic !important;
+    font-weight: lighter !important;
+    color: #999 !important;
+    line-height: 1.6em !important;
+}
 /* Recent Posts Block */
 .block-recent-posts {
     float:left;
