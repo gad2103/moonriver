@@ -82,6 +82,7 @@ media/downloadable/
 media/.htaccess
 media/import/
 media/xmlconnect/
+media/catalog/product/cache/
 nbproject/
 pear
 pear/
@@ -107,3 +108,4 @@ skin/install/
 var/
 phpmyadmin/
 phpmyadmin.deactivated/
+wp/
