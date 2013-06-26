@@ -129,7 +129,6 @@ class Fishpig_Wordpress_Block_Sidebar_Widget_Facebooklikebox extends Fishpig_Wor
 				'font' => $this->getFblikeButtonFont(),
 				'colorscheme' => $this->getFblikeButtonColorScheme(),
 			), 'fb:like');
-
 		if ($this->getPluginDisplayType() === 'like_box') {
 			if ($this->getLayoutMode() === 'iframe') {
 				$html = $likeBoxIframe;

@@ -108,6 +108,10 @@
 p.no-rating {
     display: none !important;
 }
+.nav-container {
+    padding-right: 0px !important;
+    width: 100% !important;
+}
 #nav > li > a {
     padding: 14px 14px !important;
 }
@@ -155,7 +159,10 @@ div.category-description > p:first-child + p > span {
     background: url('../images/pinterest.png') no-repeat;
     background-size: 16px 19px;
 }
-/* Recent Posts Block */
+/* Recent Posts Block and WP Misc */
+.wp-sidebar {
+    margin-bottom:27px;
+}
 .block-recent-posts {
     float:left;
     width: 50%;
@@ -192,9 +199,9 @@ p.post-date {
     border: 1px solid #ddd;
     padding: 6px;
 }
-.post-entry > * {
-    line-height: 1.625em;
-    font-size: 15px;
+.post-entry > *, .post-view > .entry > p {
+    line-height: 1.725em;
+    font-size: 14px;
 }
 .post-meta {
     clear: both;
